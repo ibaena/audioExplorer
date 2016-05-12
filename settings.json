@@ -1,0 +1,12 @@
+{
+  "public":{
+    "ga":{
+      "account":"UA-XXXXXXXXX-X"
+    }
+  },
+  "private":{
+    "tmdbapi":{
+      "key":"?api_key=3729ffa22dfa780e9abb43dee3074695"
+    }
+  }
+}
