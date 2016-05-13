@@ -1,6 +1,11 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import TrackerReact from 'meteor/ultimatejs:tracker-react';
 
-import SideNav from '../audioExplorer/SideNav.jsx'
+import SideNav from '../audioExplorer/SideNav.jsx';
+import Player from '../audioExplorer/PlayerWidget.jsx';
+
+
 export const MainLayout = ({content}) => (
 
 
@@ -10,7 +15,7 @@ export const MainLayout = ({content}) => (
       <main>
         {content}
       </main>
-    </div>
 
+    </div>
   </div>
 )
