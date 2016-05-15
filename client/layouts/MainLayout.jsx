@@ -4,6 +4,7 @@ import TrackerReact from 'meteor/ultimatejs:tracker-react';
 
 import SideNav from '../audioExplorer/SideNav.jsx';
 
+
 export const MainLayout = ({content}) => (
 
 
