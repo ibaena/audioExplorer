@@ -2,9 +2,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
 
-import RadioList from './RadioList.jsx';
-
-export default class HomeWrapper extends TrackerReact(Component) {
+export default class NowPlayingWrapper extends TrackerReact(Component) {
 
   // Note: In ES6, constructor() === componentWillMount() in React ES5
   constructor() {
@@ -18,8 +16,8 @@ export default class HomeWrapper extends TrackerReact(Component) {
 
   render() {
     return (
-      <div className="Container">
-        <RadioList />
+      <div className="container">
+        now playing
       </div>
 
     )
