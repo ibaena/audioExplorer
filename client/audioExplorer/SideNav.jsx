@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-export default class HomeWrapper extends Component {
+export default class SideNav extends Component {
 
   componentDidMount() {
     $('.button-collapse').sideNav({
