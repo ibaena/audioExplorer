@@ -19,7 +19,7 @@ export default class Player extends Component {
 
       } else {
         this.setState({ stream: res.data.results });
-        console.log(res);
+        console.log(res.data.results);
 
       }
     });
@@ -27,8 +27,8 @@ export default class Player extends Component {
 
 render() {
   return (
-    <div id="player">
-      <div className="col s12 l6">
+    <div id="player" className>
+      <div className="col s12 l12">
         <ul className="collection">
           {this.state.stream.map(radio => {
             return <li key={radio.playingnow.album_id} className="collection-item avatar">
@@ -37,15 +37,17 @@ render() {
               <p>{radio.playingnow.artist_name}
                 <br/> {radio.playingnow.artist_name}
               </p>
+              <img src={radio.playingnow.track_image} />
             </li>
-
-          })
-}
+            })
+  }
         </ul>
       </div>
-      <div className="col s12 l6">
+      <div className="col s12 l12">
+
         {this.state.stream.map(radio => {
-          return <audio key={radio.id} autoplay="autoplay" src={radio.stream} controls="controls"></audio>
+          return <audio key={radio.id} autoplay="autoplay" src={radio.stream} controls></audio>
+
         })
 }
       </div>

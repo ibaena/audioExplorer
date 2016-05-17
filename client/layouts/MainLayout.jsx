@@ -10,8 +10,10 @@ export const MainLayout = ({content}) => (
 
   <div className="main-layout">
     <SideNav />
+    <div className="container">
       <main>
         {content}
       </main>
   </div>
+</div>
 )

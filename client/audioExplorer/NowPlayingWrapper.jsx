@@ -17,9 +17,8 @@ export default class NowPlayingWrapper extends TrackerReact(Component) {
  }
 
   render() {
-    return (
-      <div className="container">
-        <Player />
+    return (<div className="row">
+          <Player />
       </div>
 
     )
