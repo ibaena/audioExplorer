@@ -20,7 +20,8 @@ export default class SearchUi extends TrackerReact(Component) {
          } else {
            Session.set('plist', res.data);
            this.setState({ items: res.data });
-           console.log(this.state);
+           console.log(Session.get('plist'));
+
          }
        });
     }

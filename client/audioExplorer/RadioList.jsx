@@ -18,7 +18,7 @@ export default class RadioList extends TrackerReact(Component) {
         // handle error
       } else {
         this.setState({ items: res.data });
-        console.log(this.state);
+        console.log(Session.get('plist'));
       }
     });
  }
@@ -31,10 +31,17 @@ export default class RadioList extends TrackerReact(Component) {
         {
           Session.get('plist').map((item)=>{
             return <div key={item.id}>
-                    <p>{item.title}</p>
-                    <p>{item.description}</p>
-
-                </div>
+              <ul className="collection">
+                <li className="collection-item avatar">
+                  <img src={item.artwork_url} alt="" className="circle responsive-img" />
+                    <span className="title">{item.title}</span>
+                    <p>
+                        <audio src={item.stream_url+"?client_id=05d4489983fdf3fb4f7c4af4b263a473"} controls></audio>
+                    </p>
+                    <a href="#!" className="secondary-content"><i className="material-icons">grade</i></a>
+                  </li>
+                </ul>
+              </div>
 
           })
         }
